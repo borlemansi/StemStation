@@ -1,0 +1,140 @@
+/* Reset spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container styles */
+.education-section {
+  width: 100%;
+  padding: 25px;
+  margin: 0;
+  background: #fff;
+}
+
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem; /* Increased gap for better spacing */
+  padding: 1rem; /* Added padding for the grid */
+  margin: 0;
+}
+
+.initiative-card {
+  background-color: #d5d0ed;
+  border: 1px solid #e9e8ff;
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  margin: 0.5rem; /* Slight margin around cards */
+}
+
+.icon-container {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.initiative-icon {
+  font-size: 2.5rem;
+}
+
+.initiative-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.initiative-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Responsive adjustments */
+
+/* For tablets (screen width 768px - 1024px) */
+@media (max-width: 1024px) {
+  .initiative-card {
+    padding: 1.5rem; /* Reduce card padding */
+  }
+
+  .icon-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .initiative-title {
+    font-size: 1.25rem; /* Adjust title size */
+  }
+
+  .initiative-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* For small devices (screen width 480px - 767px) */
+@media (max-width: 768px) {
+  .initiatives-grid {
+    gap: 1.5rem; /* Reduce grid gap */
+    padding: 0.5rem;
+  }
+
+  .initiative-card {
+    padding: 1.25rem; /* Reduce card padding further */
+  }
+
+  .icon-container {
+    width: 60px;
+    height: 60px; /* Smaller icon size */
+  }
+
+  .initiative-title {
+    font-size: 1.2rem; /* Smaller title size */
+  }
+
+  .initiative-description {
+    font-size: 0.9rem; /* Smaller text size */
+  }
+}
+
+/* For extra-small devices (screen width below 480px) */
+@media (max-width: 480px) {
+  .initiatives-grid {
+    gap: 1rem; /* Minimal gap */
+    padding: 0.25rem;
+  }
+
+  .initiative-card {
+    padding: 1rem; /* Minimal padding */
+  }
+
+  .icon-container {
+    width: 50px;
+    height: 50px; /* Icon size for small devices */
+  }
+
+  .initiative-icon {
+    font-size: 2rem;
+  }
+
+  .initiative-title {
+    font-size: 1rem; /* Compact title size */
+  }
+
+  .initiative-description {
+    font-size: 0.85rem; /* Compact text size */
+  }
+}

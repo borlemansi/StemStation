@@ -1,0 +1,60 @@
+import React from 'react';
+import './StatsSection.css';
+import statspic from '../assets/statspic.jpeg';
+
+const StatsSection = () => {
+  const stats = [
+    {
+      icon: "₹",
+      value: "83,000+",
+      label: "Crowd funded"
+    },
+    {
+      icon: "📦",
+      value: "7",
+      label: "Kits sponsored"
+    },
+    {
+      icon: "🎓",
+      value: "100+",
+      label: "Students educated"
+    }
+  ];
+
+  return (
+    <div className="impact-section">
+      <div className="impact-container">
+        {/* Left Content */}
+        <div className="impact-content">
+          <h1 className="impact-title">Our Impact</h1>
+          <p className="impact-subtitle">Transforming STEM education across Maharashtra</p>
+          
+          <div className="stats-container">
+            {stats.map((stat, index) => (
+              <div key={index} className="stat-box">
+                <div className="stat-icon">
+                  {stat.icon}
+                </div>
+                <div className="stat-text">
+                  <div className="stat-number">{stat.value}</div>
+                  <div className="stat-label">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="impact-image-container">
+          <img 
+            src={statspic}
+            alt="STEM Education Impact" 
+            className="impact-image"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default StatsSection;

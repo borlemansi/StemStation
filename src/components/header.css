@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 150px; /* Reduced padding for a more compact header */
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjusted spacing between logo image and title */
+    flex-grow: 1;
+  }
+  
+  .logo-img {
+    height: 70px; /* Slightly smaller logo for compact layout */
+  }
+  
+  .logo-text {
+    font-weight: bold;
+    font-size: 18px;
+    color: #5a4f8b;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 50px; /* Spacing between navigation links */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #5a4f8b;  /* Keep the hover color */
+    text-decoration: underline;  /* Add underline on hover */
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #5a4f8b;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 10px;
+    }
+  
+    .logo {
+      align-items: center;
+      gap: 5px; /* Reduced gap for mobile view */
+    }
+  
+    .logo-text {
+      font-size: 16px; /* Slightly smaller text for mobile view */
+    }
+  
+    .menu-toggle {
+      display: block;
+      margin-left: auto;
+    }
+  
+    .nav {
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      display: none;
+      padding: 15px;
+      border-top: 2px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .nav.nav-open {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    .nav-link {
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      color: #4a4a4a;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+  
+    .nav-link:hover {
+      color: #fff;
+      background-color: #5a4f8b;
+      border-radius: 10px;
+    }
+  }
+  
